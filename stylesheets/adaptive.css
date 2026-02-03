@@ -1,0 +1,378 @@
+@media (max-width: 1440px) {
+  .action-button,
+  .restart-button {
+    font-size: 1.1rem;
+  }
+
+  .person-image {
+    width: clamp(300px, 35%, 400px);
+  }
+
+  .person-green {
+    width: clamp(200px, 80%, 700px);
+  }
+
+  .person-blue {
+    width: clamp(300px, 50%, 1500px);
+  }
+
+  .person-red {
+    width: clamp(300px, 30%, 1500px);
+  }
+
+  .person-air {
+    width: clamp(240px, 20%, 500px);
+  }
+
+  .bg-overlay {
+    width: clamp(300px, 60%, 500px);
+  }
+
+  .main-sphere {
+    width: clamp(300px, 50vw, 400px);
+  }
+
+  .floating-sphere {
+    width: clamp(66px, 20vw, 120px);
+  }
+
+  .floating-spheres.explode .s1 {
+    transform: translate(30vw, -22vh) scale(1.8);
+  }
+
+  .floating-spheres.explode .s2 {
+    transform: translate(-10vw, -22vh) scale(1.6);
+  }
+
+  .floating-spheres.explode .s3 {
+    transform: translate(30vw, 22vh) scale(1.4);
+  }
+
+  .floating-spheres.explode .s4 {
+    transform: translate(-10vw, 22vh) scale(1.2);
+  }
+
+  .floating-spheres.to-column .s1 {
+    transform: translate(-30vw, -36vh) scale(1);
+  }
+
+  .floating-spheres.to-column .s2 {
+    transform: translate(-30vw, -12vh) scale(1);
+  }
+
+  .floating-spheres.to-column .s3 {
+    transform: translate(-30vw, 12vh) scale(1);
+  }
+
+  .floating-spheres.to-column .s4 {
+    transform: translate(-30vw, 36vh) scale(1);
+  }
+
+  .floating-sphere-wrapper.s1.to-person {
+    transform: translate(10vw, -22vh) scale(0.7);
+  }
+  .floating-sphere-wrapper.s2.to-person {
+    transform: translate(18vw, -22vh) scale(0.7);
+  }
+  .floating-sphere-wrapper.s3.to-person {
+    transform: translate(-20vw, -24vh) scale(0.7);
+  }
+  .floating-spheres.step4 .s4 {
+    transform: translate(25vw, -35vh) scale(0.7);
+  }
+
+  .floating-spheres.step1 .s2 {
+    transform: translate(-35vw, -24vh) scale(1);
+  }
+
+  .floating-spheres.step1 .s3 {
+    transform: translate(-35vw, 0vh) scale(1);
+  }
+
+  .floating-spheres.step1 .s4 {
+    transform: translate(-35vw, 26vh) scale(1);
+  }
+
+  .floating-spheres.step2 .s3 {
+    transform: translate(-35vw, -20vh) scale(1);
+  }
+
+  .floating-spheres.step2 .s4 {
+    transform: translate(-35vw, 20vh) scale(1);
+  }
+
+  .floating-spheres.step3 .s4 {
+    transform: translate(-35vw, 0vh) scale(1);
+  }
+}
+
+@media (max-width: 1024px) {
+  .floating-spheres.to-column .s1 {
+    transform: translate(-30vw, -36vh) scale(1);
+  }
+
+  .floating-spheres.to-column .s2 {
+    transform: translate(-30vw, -12vh) scale(1);
+  }
+
+  .floating-spheres.to-column .s3 {
+    transform: translate(-30vw, 12vh) scale(1);
+  }
+
+  .floating-spheres.to-column .s4 {
+    transform: translate(-30vw, 36vh) scale(1);
+  }
+
+  .floating-spheres.step1 .s2 {
+    transform: translate(-35vw, -24vh) scale(1);
+  }
+
+  .floating-spheres.step1 .s3 {
+    transform: translate(-35vw, 0vh) scale(1);
+  }
+
+  .floating-spheres.step1 .s4 {
+    transform: translate(-35vw, 26vh) scale(1);
+  }
+
+  .floating-spheres.step2 .s3 {
+    transform: translate(-35vw, -20vh) scale(1);
+  }
+
+  .floating-spheres.step2 .s4 {
+    transform: translate(-35vw, 20vh) scale(1);
+  }
+
+  .floating-spheres.step3 .s4 {
+    transform: translate(-35vw, 0vh) scale(1);
+  }
+
+  .floating-sphere-wrapper.s1.to-person {
+    transform: translate(10vw, -22vh) scale(0.7);
+  }
+  .floating-sphere-wrapper.s2.to-person {
+    transform: translate(18vw, -22vh) scale(0.7);
+  }
+  .floating-sphere-wrapper.s3.to-person {
+    transform: translate(-20vw, -24vh) scale(0.7);
+  }
+  .floating-spheres.step4 .s4 {
+    transform: translate(25vw, -35vh) scale(0.7);
+  }
+}
+
+@media (max-width: 768px) {
+  .sphere-label {
+    display: none;
+  }
+
+  .person-green {
+    width: clamp(300px, 100%, 900px);
+  }
+
+  .person-blue {
+    width: clamp(300px, 60%, 1500px);
+  }
+
+  .person-red {
+    width: clamp(300px, 60%, 1500px);
+  }
+
+  .person-air {
+    width: clamp(240px, 20%, 500px);
+  }
+
+  .bg-overlay {
+    width: clamp(300px, 80%, 500px);
+  }
+
+  .floating-spheres.explode .s1 {
+    transform: translate(28vw, -22vh) scale(1.8);
+  }
+
+  .floating-spheres.explode .s2 {
+    transform: translate(-28vw, -22vh) scale(1.6);
+  }
+
+  .floating-spheres.explode .s3 {
+    transform: translate(28vw, 22vh) scale(1.4);
+  }
+
+  .floating-spheres.explode .s4 {
+    transform: translate(-28vw, 22vh) scale(1.2);
+  }
+
+  .floating-spheres.to-column .s1 {
+    transform: translate(-35vw, -36vh) scale(1);
+  }
+
+  .floating-spheres.to-column .s2 {
+    transform: translate(-35vw, -12vh) scale(1);
+  }
+
+  .floating-spheres.to-column .s3 {
+    transform: translate(-35vw, 12vh) scale(1);
+  }
+
+  .floating-spheres.to-column .s4 {
+    transform: translate(-35vw, 36vh) scale(1);
+  }
+
+  .floating-sphere-wrapper.s1.to-person {
+    transform: translate(10vw, -22vh) scale(0.7);
+  }
+  .floating-sphere-wrapper.s2.to-person {
+    transform: translate(18vw, -22vh) scale(0.7);
+  }
+  .floating-sphere-wrapper.s3.to-person {
+    transform: translate(-20vw, -24vh) scale(0.7);
+  }
+  .floating-spheres.step4 .s4 {
+    transform: translate(25vw, -35vh) scale(0.7);
+  }
+
+  .floating-spheres.step1 .s2 {
+    transform: translate(-35vw, -24vh) scale(1);
+  }
+
+  .floating-spheres.step1 .s3 {
+    transform: translate(-35vw, 0vh) scale(1);
+  }
+
+  .floating-spheres.step1 .s4 {
+    transform: translate(-35vw, 26vh) scale(1);
+  }
+
+  .floating-spheres.step2 .s3 {
+    transform: translate(-35vw, -20vh) scale(1);
+  }
+
+  .floating-spheres.step2 .s4 {
+    transform: translate(-35vw, 20vh) scale(1);
+  }
+
+  .floating-spheres.step3 .s4 {
+    transform: translate(-35vw, 0vh) scale(1);
+  }
+
+  .fly-image {
+    width: clamp(100px, 35%, 900px);
+  }
+}
+
+@media (max-width: 480px) {
+  .person-image {
+    max-width: none;
+  }
+  .person-green {
+    width: clamp(300px, 180%, 900px);
+  }
+
+  .person-blue {
+    width: clamp(350px, 80%, 1500px);
+  }
+
+  .person-red {
+    width: clamp(300px, 60%, 1500px);
+  }
+
+  .person-air {
+    width: clamp(240px, 20%, 500px);
+  }
+
+  .floating-sphere {
+    width: clamp(60px, 22vw, 100px);
+  }
+
+  .floating-spheres.to-column .s1 {
+    transform: translate(-33vw, -40vh) scale(1);
+  }
+
+  .floating-spheres.to-column .s2 {
+    transform: translate(-11vw, -40vh) scale(1);
+  }
+
+  .floating-spheres.to-column .s3 {
+    transform: translate(11vw, -40vh) scale(1);
+  }
+
+  .floating-spheres.to-column .s4 {
+    transform: translate(33vw, -40vh) scale(1);
+  }
+
+  .floating-sphere-wrapper.s1.to-person {
+    transform: translate(20vw, -24vh) scale(0.7);
+  }
+
+  .floating-sphere-wrapper.s2.to-person {
+    transform: translate(10vw, -4vh) scale(0.7);
+  }
+  .floating-sphere-wrapper.s3.to-person {
+    transform: translate(-26vw, -28vh) scale(0.7);
+  }
+  .floating-spheres.step4 .s4 {
+    transform: translate(25vw, -35vh) scale(0.7);
+  }
+
+  .floating-spheres.rearranged .s2 {
+    transform: translate(-25vw, -40vh) scale(1);
+  }
+
+  .floating-spheres.rearranged .s3 {
+    transform: translate(0vw, -40vh) scale(1);
+  }
+
+  .floating-spheres.rearranged .s4 {
+    transform: translate(25vw, -40vh) scale(1);
+  }
+
+  .floating-spheres.step1 .s2 {
+    transform: translate(-25vw, -40vh) scale(1);
+  }
+
+  .floating-spheres.step1 .s3 {
+    transform: translate(0vw, -40vh) scale(1);
+  }
+
+  .floating-spheres.step1 .s4 {
+    transform: translate(25vw, -40vh) scale(1);
+  }
+
+  .floating-spheres.step2 .s3 {
+    transform: translate(-12vw, -40vh) scale(1);
+  }
+
+  .floating-spheres.step2 .s4 {
+    transform: translate(12vw, -40vh) scale(1);
+  }
+
+  .floating-spheres.step3 .s4 {
+    transform: translate(0vw, -40vh) scale(1);
+  }
+
+  .fly-image {
+    width: clamp(100px, 50%, 900px);
+  }
+
+  @keyframes flyIn {
+    0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-150%, 65%) rotateZ(360deg);
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes flyOut {
+    0% {
+      transform: translate(-150%, 65%) rotateZ(360deg);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translate(200%, -50%) rotateZ(720deg);
+      opacity: 0;
+    }
+  }
+}

@@ -1,19 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="valgerte" />
-    <title>ashi.immersive</title>
+    <title>Аши: иммерсия релакса</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <!-- ФАВИКОНКА -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <meta property="og:url" content="website"
-    <script src="javascript/js-basics.js"></script>
-    <!-- SEO + Context -->
+    <link rel="icon" href="images/favicon.png" type="image/png" />
   </head>
-    <body>
-    <!-- секция один -->
-    <div><img src="images/forfavicon.png" alt="" /></div>
+  <body>
+    <div class="page-background">
+      <img src="images/gradientBackground.webp" class="bg-image main-bg" />
+
+      <img src="images/lotusBackground.webp" class="bg-reveal" />
+      <img src="images/humanLotus.webp" class="bg-overlay" />
+      <img src="images/lotusBlur.webp" class="bg-overlay2" />
+
+      <img src="images/greenRock.webp" class="bg-floating" />
+    </div>
+
+    <div class="scene">
+      <div class="central-sphere">
+        <img src="images/mainSphere.webp" alt="Сфера" class="main-sphere" />
+        <img
+          src="images/gradientGreenHuman.webp"
+          alt="Человек"
+          class="person-image"
+        />
+
+        <img src="images/grassWrapper.webp" class="pulse-image" />
+
+        <img src="images/greenGrass.webp" class="fly-image" />
+      </div>
+
+      <div class="floating-spheres">
+        <div class="floating-sphere-wrapper s1 active" data-index="0">
+          <div class="sphere-inner">
+            <img src="images/plantSphere.webp" class="floating-sphere" />
+          </div>
+          <span class="sphere-label">Прикоснуться к флоре</span>
+        </div>
+
+        <div class="floating-sphere-wrapper s2 active" data-index="1">
+          <div class="sphere-inner">
+            <img src="images/waterSphere.webp" class="floating-sphere" />
+          </div>
+          <span class="sphere-label">Пробудить поток</span>
+        </div>
+
+        <div class="floating-sphere-wrapper s3 active" data-index="2">
+          <div class="sphere-inner">
+            <img src="images/fireSphere.webp" class="floating-sphere" />
+          </div>
+          <span class="sphere-label">Разжечь тепло</span>
+        </div>
+
+        <div class="floating-sphere-wrapper s4 active" data-index="3">
+          <div class="sphere-inner">
+            <img src="images/cloudSphere.webp" class="floating-sphere" />
+          </div>
+          <span class="sphere-label">Ощутить невесомость</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="action-button">Начать цикл</button>
+    <button class="restart-button">Повторить исцеление</button>
+
+    <div class="preloader">
+      <img src="images/bigLogo.webp" alt="Логотип" class="preloader__logo" />
+    </div>
+
+    <div class="flash-overlay"></div>
+
+    <script src="javascript/preloader.js"></script>
+    <script src="javascript/floatingSpheres.js"></script>
+    <script src="javascript/main.js"></script>
   </body>
 </html>
