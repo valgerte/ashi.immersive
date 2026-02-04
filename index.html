@@ -15,19 +15,23 @@
       <img src="images/humanLotus.webp" class="bg-overlay" />
       <img src="images/lotusBlur.webp" class="bg-overlay2" />
 
-      <img src="images/greenRock.webp" class="bg-floating" />
+      <div class="bg-floating-offset">
+        <img src="images/greenRock.webp" class="bg-floating" />
+      </div>
     </div>
 
     <div class="scene">
       <div class="central-sphere">
         <img src="images/mainSphere.webp" alt="Сфера" class="main-sphere" />
-        <img
-          src="images/gradientGreenHuman.webp"
-          alt="Человек"
-          class="person-image"
-        />
+        <div class="person-float">
+          <img
+            src="images/gradientGreenHuman.webp"
+            alt="Человек"
+            class="person-image"
+          />
 
-        <img src="images/grassWrapper.webp" class="pulse-image" />
+          <img src="images/grassWrapper.webp" class="pulse-image" />
+        </div>
 
         <img src="images/greenGrass.webp" class="fly-image" />
       </div>
@@ -72,8 +76,13 @@
 
     <div class="flash-overlay"></div>
 
+    <div class="cursor-blur">
+      <img src="images/cursor.png" alt="" />
+    </div>
+
     <script src="javascript/preloader.js"></script>
     <script src="javascript/floatingSpheres.js"></script>
+    <script src="javascript/cursor.js"></script>
     <script src="javascript/main.js"></script>
   </body>
 </html>

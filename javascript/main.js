@@ -8,6 +8,7 @@ const personImage = qs(".person-image");
 const mainBg = qs(".main-bg");
 const mainSphere = qs(".main-sphere");
 const floating = qs(".bg-floating");
+const floatingOffset = qs(".bg-floating-offset");
 
 const pulse = qs(".pulse-image");
 const fly = qs(".fly-image");
@@ -48,10 +49,11 @@ const SCENES = [
     human: "images/waterHuman.webp",
     class: "person-blue",
     rotate: "0deg",
-    translate: "0",
+    translate: "0 10vh",
     pulse: "images/blueWater2.webp",
     fly: "images/blueWater3.webp",
     floating: "images/lotusPool.webp",
+    floatingOffsetY: "50%",
   },
   {
     bg: "images/fireBackground.webp",
@@ -121,6 +123,8 @@ function activateScene(index, sphere) {
 
     sphere.classList.add("to-person");
 
+    qs(".person-float").classList.add("active");
+
     if (index === 0) {
       mainSphere.style.display = "none";
 
@@ -144,6 +148,11 @@ function activateScene(index, sphere) {
       floating.style.display = "block";
       floating.src = scene.floating;
       floating.classList.add("visible");
+
+      floatingOffset.style.setProperty(
+        "--offsetY",
+        scene.floatingOffsetY || "0%",
+      );
     } else {
       floating.style.display = "none";
     }
@@ -179,6 +188,7 @@ function playEnergy(scene, onFinish) {
   setTimeout(() => {
     pulse.classList.add("fade-out");
     fly.classList.add("fly-out");
+    qs(".person-float").classList.remove("active");
     onFinish();
   }, 6000);
 }

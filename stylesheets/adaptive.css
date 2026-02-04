@@ -26,6 +26,7 @@
 
   .bg-overlay {
     width: clamp(300px, 60%, 500px);
+    height: 500px;
   }
 
   .main-sphere {
@@ -184,6 +185,7 @@
 
   .bg-overlay {
     width: clamp(300px, 80%, 500px);
+    height: 350px;
   }
 
   .floating-spheres.explode .s1 {
@@ -354,25 +356,8 @@
     width: clamp(100px, 50%, 900px);
   }
 
-  @keyframes flyIn {
-    0% {
-      transform: translate(-50%, -50%) rotateZ(0deg);
-      opacity: 0;
-    }
-    100% {
-      transform: translate(-150%, 65%) rotateZ(360deg);
-      opacity: 0.5;
-    }
-  }
-
-  @keyframes flyOut {
-    0% {
-      transform: translate(-150%, 65%) rotateZ(360deg);
-      opacity: 0.5;
-    }
-    100% {
-      transform: translate(200%, -50%) rotateZ(720deg);
-      opacity: 0;
-    }
+  .fly-image.active {
+    left: 25%;
+    top: 75%;
   }
 }
