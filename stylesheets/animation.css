@@ -223,7 +223,7 @@
 }
 
 .person-float {
-  animation: floatY 4s ease-in-out infinite;
+  animation: floatY 4s ease-in-out infinite alternate;
   will-change: transform;
   position: absolute;
   width: 100%;

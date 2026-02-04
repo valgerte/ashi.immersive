@@ -212,7 +212,7 @@
 
 .person-image {
   position: absolute;
-  width: clamp(200px, 30%, 900px);
+  width: clamp(200px, 35%, 900px);
   min-height: 100px;
   max-height: 1200px;
   object-fit: cover;
