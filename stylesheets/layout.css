@@ -40,14 +40,14 @@
   opacity: 0;
   max-width: none;
   width: 120%;
-  height: 100vh;
+  height: 120%;
   object-fit: cover;
   pointer-events: none;
   animation: floatUpDown 2s ease-in-out infinite alternate;
 }
 
 .bg-floating.visible {
-  opacity: 0.8;
+  opacity: 0.6;
   transition: opacity 0.5s ease;
   z-index: 1;
 }
@@ -67,16 +67,16 @@
   position: absolute;
   opacity: 0;
   pointer-events: none;
-  filter: brightness(1.5);
   mix-blend-mode: hard-light;
 }
 
 .pulse-image {
-  width: clamp(300px, 50%, 900px);
+  width: clamp(300px, 40%, 900px);
 }
 
 .fly-image {
   width: clamp(300px, 30%, 900px);
+  mix-blend-mode: lighten;
 }
 
 .pulse-image.active {
@@ -125,6 +125,8 @@
 .main-sphere {
   width: clamp(300px, 45vw, 800px);
   height: auto;
+  mix-blend-mode: lighten;
+  opacity: 0.7;
 }
 
 .floating-spheres {
@@ -212,7 +214,7 @@
 
 .person-image {
   position: absolute;
-  width: clamp(200px, 35%, 900px);
+  width: clamp(200px, 41%, 900px);
   min-height: 100px;
   max-height: 1200px;
   object-fit: cover;
@@ -228,7 +230,7 @@
 }
 
 .person-green {
-  width: clamp(300px, 80%, 1500px);
+  width: clamp(300px, 70%, 1500px);
 }
 
 .person-blue {
@@ -236,7 +238,7 @@
 }
 
 .person-red {
-  width: clamp(300px, 35%, 1500px);
+  width: clamp(300px, 33%, 1500px);
 }
 
 .person-air {
@@ -245,7 +247,7 @@
 
 .bg-reveal {
   position: fixed;
-  inset: 0;
+  inset: -5px;
   object-fit: cover;
   z-index: 5;
   height: 110vh;

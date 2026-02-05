@@ -184,8 +184,8 @@
   }
 
   .bg-overlay {
-    width: clamp(300px, 80%, 500px);
-    height: 350px;
+    width: clamp(300px, 100%, 900px);
+    height: 500px;
   }
 
   .floating-spheres.explode .s1 {

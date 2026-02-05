@@ -38,11 +38,14 @@ const SCENES = [
     bg: "images/greenBackground.webp",
     human: "images/gradientGreenHuman.webp",
     class: "person-green",
-    rotate: "-70deg",
+    rotate: "-80deg",
     translate: "0 -10vh",
     pulse: "images/grassWrapper.webp",
     fly: "images/greenGrass.webp",
     floating: "images/greenRock.webp",
+    floatingOpacity: 0.2,
+    flyBlendMode: "screen",
+    flyOpacity: 0.66,
   },
   {
     bg: "images/waterBackground.webp",
@@ -54,6 +57,8 @@ const SCENES = [
     fly: "images/blueWater3.webp",
     floating: "images/lotusPool.webp",
     floatingOffsetY: "50%",
+    flyBlendMode: "hard-light",
+    flyOpacity: 0.8,
   },
   {
     bg: "images/fireBackground.webp",
@@ -62,8 +67,10 @@ const SCENES = [
     rotate: "20deg",
     translate: "0 -10vh",
     pulse: "images/lavaBig.webp",
-    fly: "images/lavaLamp.webp",
+    fly: "images/lavaLamp.png",
     floating: null,
+    flyBlendMode: "overlay",
+    flyOpacity: 0.48,
   },
   {
     bg: "images/airBackground.webp",
@@ -74,6 +81,8 @@ const SCENES = [
     pulse: "images/whiteClouds.webp",
     fly: "images/rotatedClouds.webp",
     floating: "images/floatingClouds.webp",
+    floatingOpacity: 0.3,
+    flyOpacity: 0.8,
   },
 ];
 
@@ -148,6 +157,10 @@ function activateScene(index, sphere) {
       floating.style.display = "block";
       floating.src = scene.floating;
       floating.classList.add("visible");
+      floating.classList.remove("fixed");
+
+      floating.style.opacity =
+        scene.floatingOpacity !== undefined ? scene.floatingOpacity : "1";
 
       floatingOffset.style.setProperty(
         "--offsetY",
@@ -179,6 +192,8 @@ function playEnergy(scene, onFinish) {
   pulse.src = scene.pulse;
   fly.src = scene.fly;
 
+  fly.style.mixBlendMode = scene.flyBlendMode || "normal";
+
   pulse.classList.remove("fade-out", "active");
   fly.classList.remove("fly-out", "active");
 
@@ -188,6 +203,7 @@ function playEnergy(scene, onFinish) {
   setTimeout(() => {
     pulse.classList.add("fade-out");
     fly.classList.add("fly-out");
+    floating.classList.add("fixed");
     qs(".person-float").classList.remove("active");
     onFinish();
   }, 6000);

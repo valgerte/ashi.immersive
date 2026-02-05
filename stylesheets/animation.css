@@ -46,6 +46,11 @@
   transition: transform 0.5s ease;
 }
 
+.bg-floating.fixed {
+  animation-play-state: paused;
+  transition: transform 0.5s ease;
+}
+
 .floating-spheres.step1 .s2 {
   transform: translate(-40vw, -24vh) scale(1);
 }
@@ -192,14 +197,14 @@
     transform: scale(0.9);
   }
   100% {
-    opacity: 1;
+    opacity: 0.8;
     transform: scale(1);
   }
 }
 
 @keyframes flyOut {
   0% {
-    opacity: 1;
+    opacity: 0.8;
     transform: scale(1);
   }
   100% {
@@ -261,7 +266,6 @@
   align-items: center;
   transform: translateY(var(--offsetY, 0));
   pointer-events: none;
-  mix-blend-mode: hard-light;
 }
 
 .cursor-blur {
@@ -286,4 +290,12 @@
   width: 64px;
   height: 64px;
   object-fit: contain;
+}
+
+.first-bg-image {
+  transition: opacity 4s;
+}
+
+.first-bg-image.hide {
+  opacity: 0;
 }
