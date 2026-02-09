@@ -6,9 +6,9 @@ const restartButton = qs(".restart-button");
 
 const personImage = qs(".person-image");
 const mainBg = qs(".main-bg");
-const mainSphere = qs(".main-sphere");
-const floating = qs(".bg-floating");
-const floatingOffset = qs(".bg-floating-offset");
+// const mainSphere = qs(".main-sphere");
+// const floating = qs(".bg-floating");
+// const floatingOffset = qs(".bg-floating-offset");
 
 const pulse = qs(".pulse-image");
 const fly = qs(".fly-image");
@@ -35,7 +35,7 @@ let enabled = false;
 
 const SCENES = [
   {
-    bg: "images/greenBackground.webp",
+    bg: "images/earthBg.png",
     human: "images/gradientGreenHuman.webp",
     class: "person-green",
     rotate: "-80deg",
@@ -46,9 +46,10 @@ const SCENES = [
     floatingOpacity: 0.2,
     flyBlendMode: "screen",
     flyOpacity: 0.66,
+    pulseBlend: "screen",
   },
   {
-    bg: "images/waterBackground.webp",
+    bg: "images/waterBg.png",
     human: "images/waterHuman.webp",
     class: "person-blue",
     rotate: "0deg",
@@ -59,6 +60,7 @@ const SCENES = [
     floatingOffsetY: "50%",
     flyBlendMode: "hard-light",
     flyOpacity: 0.8,
+    pulseBlend: "normal",
   },
   {
     bg: "images/fireBackground.webp",
@@ -71,9 +73,10 @@ const SCENES = [
     floating: null,
     flyBlendMode: "overlay",
     flyOpacity: 0.48,
+    pulseBlend: "overlay",
   },
   {
-    bg: "images/airBackground.webp",
+    bg: "images/cloudBg.png",
     human: "images/airHuman.webp",
     class: "person-air",
     rotate: "0deg",
@@ -83,6 +86,7 @@ const SCENES = [
     floating: "images/floatingClouds.webp",
     floatingOpacity: 0.3,
     flyOpacity: 0.8,
+    pulseBlend: "soft-light",
   },
 ];
 
@@ -135,7 +139,7 @@ function activateScene(index, sphere) {
     qs(".person-float").classList.add("active");
 
     if (index === 0) {
-      mainSphere.style.display = "none";
+      // mainSphere.style.display = "none";
 
       personImage.classList.remove("active");
       personImage.classList.add("fixed", scene.class);
@@ -153,22 +157,22 @@ function activateScene(index, sphere) {
 
     mainBg.src = scene.bg;
 
-    if (scene.floating) {
-      floating.style.display = "block";
-      floating.src = scene.floating;
-      floating.classList.add("visible");
-      floating.classList.remove("fixed");
+    // if (scene.floating) {
+    //   floating.style.display = "block";
+    //   floating.src = scene.floating;
+    //   floating.classList.add("visible");
+    //   floating.classList.remove("fixed");
 
-      floating.style.opacity =
-        scene.floatingOpacity !== undefined ? scene.floatingOpacity : "1";
+    //   floating.style.opacity =
+    //     scene.floatingOpacity !== undefined ? scene.floatingOpacity : "1";
 
-      floatingOffset.style.setProperty(
-        "--offsetY",
-        scene.floatingOffsetY || "0%",
-      );
-    } else {
-      floating.style.display = "none";
-    }
+    //   floatingOffset.style.setProperty(
+    //     "--offsetY",
+    //     scene.floatingOffsetY || "0%",
+    //   );
+    // } else {
+    //   floating.style.display = "none";
+    // }
   });
 
   playEnergy(scene, () => {
@@ -193,9 +197,12 @@ function playEnergy(scene, onFinish) {
   fly.src = scene.fly;
 
   fly.style.mixBlendMode = scene.flyBlendMode || "normal";
+  pulse.style.mixBlendMode = scene.pulseBlend || "normal";
 
   pulse.classList.remove("fade-out", "active");
   fly.classList.remove("fly-out", "active");
+  qs(".bg-float").classList.add("active");
+
 
   setTimeout(() => pulse.classList.add("active"), 1200);
   setTimeout(() => fly.classList.add("active"), 800);
@@ -203,8 +210,9 @@ function playEnergy(scene, onFinish) {
   setTimeout(() => {
     pulse.classList.add("fade-out");
     fly.classList.add("fly-out");
-    floating.classList.add("fixed");
+    // floating.classList.add("fixed");
     qs(".person-float").classList.remove("active");
+    qs(".bg-float").classList.remove("active");
     onFinish();
   }, 6000);
 }
@@ -216,7 +224,7 @@ function playEnergy(scene, onFinish) {
 function endScene() {
   personImage.style.display = "none";
   floatingSpheres.style.display = "none";
-  floating.classList.remove("visible");
+  // floating.classList.remove("visible");
 
   setTimeout(() => bgReveal.classList.add("active"), 200);
   setTimeout(() => bgOverlay.classList.add("active"), 1200);

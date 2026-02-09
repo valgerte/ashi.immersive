@@ -16,6 +16,7 @@
   height: 100%;
   object-fit: cover;
   transition: opacity 1s ease;
+  /* transform: translateY(20%); */
   opacity: 1;
 }
 
@@ -127,6 +128,8 @@
   height: auto;
   mix-blend-mode: lighten;
   opacity: 0.7;
+  position: relative;
+  z-index: 10;
 }
 
 .floating-spheres {
