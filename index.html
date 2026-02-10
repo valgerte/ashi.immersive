@@ -10,10 +10,17 @@
   <body>
     <div class="page-background">
       <div class="bg-float">
-      <img src="images/secondBg.png" class="bg-image main-bg" />
-      <img src="images/firstBg.png" class="bg-image first-bg-image" />
+        <picture>
+          <source srcset="images/mobileBg.png" media="(max-width: 321px)" />
+          <source srcset="images/tabletBg.png" media="(max-width: 641px)" />
+          <img src="images/secondBg.png" class="bg-image main-bg" />
+        </picture>
+        <picture>
+          <source srcset="images/mobileFirstBg.png" media="(max-width: 321px)" />
+          <source srcset="images/tabletFirstBg.png" media="(max-width: 641px)" />
+          <img src="images/firstBg.png" class="bg-image first-bg-image" />
+        </picture>
       </div>
-      
 
       <img src="images/lotusBackground.webp" class="bg-reveal" />
       <img src="images/humanLotus.png" class="bg-overlay" />
